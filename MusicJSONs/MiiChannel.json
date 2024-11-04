@@ -1,0 +1,49 @@
+{
+    "title": "Mii Channel",
+    "artist": "Kazumi Totaka",
+    "album": "Wii Channels",
+    "year": 2006,
+    "genre": "Video Game OST",
+    "albumart": "MusicFiles/Mii Channel/mii.jpeg",
+    "bpm": 114.19,
+    "songtype": "loopable",
+    "segments": [
+        {
+            "segmentName": "FULLSONG",
+            "segmentBarCount": 116,
+            "mixingType": "exclusive",
+            "loopType": "jump",
+            "layers": 
+            [
+                {
+                    "layerName": "Plaza",
+                    "fileName": "MusicFiles/Mii Channel/Mii Channel (Plaza).wav",
+                    "beatCount": 116,
+                    "playMode": "forever",
+                    "transitionInType": "fade",
+                    "transitionOutType": "fade",
+                    "transitionDuration": 1.0
+                },
+                {
+                    "layerName": "Make a Mii",
+                    "fileName": "MusicFiles/Mii Channel/Mii Channel (Editing).wav",
+                    "beatCount": 116,
+                    "playMode": "forever",
+                    "transitionInType": "fade",
+                    "transitionOutType": "fade",
+                    "transitionDuration": 1.0
+                },
+                {
+                    "layerName": "Parade",
+                    "fileName": "MusicFiles/Mii Channel/Mii Channel (Parade).wav",
+                    "beatCount": 116,
+                    "playMode": "forever",
+                    "transitionInType": "fade",
+                    "transitionOutType": "fade",
+                    "transitionDuration": 1.0
+                }
+                
+            ]
+        }
+    ]
+}

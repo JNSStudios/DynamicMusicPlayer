@@ -1,0 +1,24 @@
+{
+    "title": "The Hand That Feeds",
+    "artist": "Nine Inch Nails",
+    "album": "With Teeth",
+    "year": 2005,
+    "genre": "Industrial Rock",
+    "albumArt": "MusicFiles/The Hand That Feeds/withteeth.jpeg",
+    "bpm": 128,
+    "songType": "Linear",
+    "segments": [
+        {
+            "segmentName": "FULLSONG",
+            "mixingType": "NA",
+            "loopType": "NA",  
+            "layers": [
+                {
+                    "layerName": "Song",
+                    "fileName": "MusicFiles/The Hand That Feeds/The Hand That Feeds (OG).wav",
+                    "playMode": "Once"
+                }
+            ]
+        }
+    ]
+}

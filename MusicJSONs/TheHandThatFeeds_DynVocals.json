@@ -1,0 +1,92 @@
+{
+    "title": "The Hand That Feeds",
+    "artist": "Nine Inch Nails",
+    "album": "With Teeth",
+    "year": 2005,
+    "genre": "Industrial Rock",
+    "albumArt": "MusicFiles/The Hand That Feeds/withteeth.jpeg",
+    "bpm": 128,
+    "songType": "Linear INST+VOC",
+    "layerControls": {
+        "hasLayerControls": true,
+        "buttons": [
+            {
+                "buttonName": "instrumentalToggle",
+                "buttonText": "Instrumental",
+                "defaultPosition": false,
+                "invertPosition": true
+            }
+        ]
+    },
+    "segments": [
+        {
+            "segmentName": "FULLSONG",
+            "mixingType": "NA",
+            "loopType": "NA",
+            "layers": [
+                {
+                    "layerName": "Instrumental",
+                    "fileName": "MusicFiles/The Hand That Feeds/The Hand That Feeds (Instrumental).wav",
+                    "playMode": "Once",
+                    "button": null,
+                    "transition": {
+                        "transitionInType": "None",
+                        "transitionOutType": "None",
+                        "transitionDuration": 0.0,
+                        "leadInDuration": 0.0
+                    },
+                    "loop": {
+                        "loopStartBeat": 0,
+                        "loopEndBeat": 0,
+                        "loopTransitionType": "None",
+                        "loopTransitionDuration": 0.0
+                    },
+                    "layerCombinations": [
+                        {
+                            "alsoEnables": [],
+                            "alsoDisables": []
+                        }
+                    ]
+                },
+                {
+                    "layerName": "Lyrics",
+                    "fileName": "MusicFiles/The Hand That Feeds/The Hand That Feeds (Vocals).wav",
+                    "playMode": "Once",
+                    "button": "instrumentalToggle",
+                    "transition": {
+                        "transitionInType": "None",
+                        "transitionOutType": "None",
+                        "transitionDuration": 0.0,
+                        "leadInDuration": 0.0
+                    },
+                    "loop": {
+                        "loopStartBeat": 0,
+                        "loopEndBeat": 0,
+                        "loopTransitionType": "None",
+                        "loopTransitionDuration": 0.0
+                    },
+                    "layerCombinations": [
+                        {
+                            "alsoEnables": [],
+                            "alsoDisables": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "linearPlaybackTimeline": [
+        {
+            "action": "PLAY_SEGMENT",
+            "segment": "FULLSONG",
+            "layers": ["Instrumental", "Lyrics"],
+            "beatsUntilNextInstruction": 464
+        },
+        {
+            "action": "END_SONG",
+            "method": "fadeoutAfter",
+            "endSegment": "None",
+            "duration": 8.0
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "title": "TITLE",
+    "artist": "ARTIST",
+    "album": "ALBUM",
+    "year": 2000,
+    "genre": "GENRE",
+    "albumart": "PATHTOFILE.EXT",
+    "bpm": 100,
+    "songtype": "(shown for debugging purposes) LINEAR / LOOPABLE / DYNAMIC / INST+VOC",
+    "layerControls":
+    {
+        "hasLayerControls": "boolean for if this song has dynamic mixing controls. Keep below array empty if false",
+        "buttons":
+        [
+            {
+                "buttonName": "Used as the internal name for this button. Use EXACT name in layers to link them.",
+                "buttonText": "The button text shown to the end user",
+                "defaultPosition": "boolean for what this starts out as. Ex: start with vocals on but can be turned off by user",
+                "invertPosition": "boolean indicating if the button's function should be inverted for the user. For example, a 'vocal' button labeled as 'instrumental' to the user, which appears off but actually means the vocals are on."
+            }
+        ]
+    },
+    "segments": [
+        {
+            "segmentName": "FULLSONG if linear, or name of segment",
+            "mixingType": "NA for none, VERTICAL for multiple layers combining, EXCLUSIVE for fading between variants",
+            "loopType": "NA for linear, LOOP for looping, JUMP for jumping between variants instantly",
+            "layers": 
+            [
+                {
+                    "layerName": "Layer name (first layer is always considered the base layer and is always enabled)",
+                    "fileName": "path to the file",
+                    "playMode": "Once for linear, Forever for loopable",
+
+                    "button": "either None for no button, or the name of the button this layer is controlled by",
+
+                    "transition":
+                    {
+                        "transitionInType": "None for instantly cutting in, Fade for fading in (using Duration in beats)",
+                        "transitionOutType": "Same as above but for transitioning OUT",
+                        "transitionDuration": 0.0,
+                        "leadInDuration": 0.0
+                    },
+                    
+                    "loop":
+                    {
+                        "loopStartBeat": 0,
+                        "loopEndBeat": 0,
+                        "loopTransitionType": "(the loop object is ignored if playMode is Once) fade for Fading from loopStart to loopEnd (uses Duration), none for instant",
+                        "loopTransitionDuration": 0
+                    },
+                    "layerCombinations":
+                    [
+                        {
+                            "alsoEnables": 
+                            [
+                                "Layer name to enable when this layer is enabled"
+                            ],
+                            "alsoDisables":
+                            [
+                                "Layer name to disable when this layer is enabled"
+                            ]
+                        }
+                    ]
+                }, 
+                {
+                    
+                }
+            ]
+        }
+    ],
+
+    "linearPlaybackTimeline":
+    [
+        {
+            "action": "PLAY_SEGMENT for playing a segment while handling the transition (no transition if first action since it's starting from silence), ENABLE_LAYER for enabling a layer in the current segment",
+            "segment": "Segment name to play",
+            "layers": [
+                "list layer(s) to enable when this action is taken"
+            ],
+            "beatsUntilNextInstruction": 34
+        },
+        {
+            "action": "END_SONG (ends the song with the below method)",
+            "method": "fadeoutAfter (loop the current section until the fadeout is complete, uses Duration in beats), jumpToSegment (instantly jump to the segment specified)",
+            "endSegment": "Segment name to jump to if method is jumpToSegment (this is where the ending of the song would be if it has a definitive end)",
+            "duration": 8.0
+        }
+    ]
+}

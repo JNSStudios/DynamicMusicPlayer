@@ -1,0 +1,125 @@
+{
+    "title": "Menu Theme",
+    "artist": "Asuka Ohta, Ryo Nagamatsu",
+    "album": "Mario Kart Wii",
+    "year": 2008,
+    "genre": "Video Game OST",
+    "albumart": "MusicFiles/Mario Kart Wii Main Menu/mkw.jpeg",
+    "bpm": 87,
+    "songtype": "loopable",
+
+    "segments": [
+        {
+            "segmentName": "FULLSONG",
+            "segmentBarCount": 18,
+            "mixingType": "vertical",
+            "loopType": "loop",
+            "layers": 
+            [
+                {
+                    "layerName": "Mode/CC Select",
+                    "fileName": "MusicFiles/Mii Channel/Mii Channel (Plaza).wav",
+                    "playMode": "forever",
+                    "transitionInType": "fade",
+                    "transitionOutType": "fade",
+                    "transitionDuration": 1.0,
+
+                    "loopStartBeat": 0,
+                    "loopEndBeat": 18,
+                    "loopTransitionType": "fade",
+                    "loopTransitionDuration": 1.0,
+
+                    "baseLayer": true,
+                    "alsoEnables": 
+                    [
+
+                    ],
+                    "alsoDisables":
+                    [
+                        "Character Select",
+                        "Track Select"
+                    ]
+                },
+
+                {
+                    "layerName": "Character Select",
+                    "fileName": "MusicFiles/Mii Channel/Mii Channel (Editing).wav",
+                    "playMode": "forever",
+                    "transitionInType": "fade",
+                    "transitionOutType": "fade",
+                    "transitionDuration": 1.0,
+
+                    "loopStartBeat": 0,
+                    "loopEndBeat": 18,
+                    "loopTransitionType": "fade",
+                    "loopTransitionDuration": 1.0,
+
+                    "baseLayer": false,
+                    
+                    "alsoEnables":
+                    [
+
+                    ],
+                    "alsoDisables":
+                    [
+                        "Character Select",
+                        "Track Select"
+                    ]
+                },
+                {
+                    "layerName": "Track Select",
+                    "fileName": "MusicFiles/Mii Channel/Mii Channel (Parade).wav",
+                    "playMode": "forever",
+                    "transitionInType": "fade",
+                    "transitionOutType": "fade",
+                    "transitionDuration": 1.0,
+
+                    "loopStartBeat": 0,
+                    "loopEndBeat": 18,
+                    "loopTransitionType": "fade",
+                    "loopTransitionDuration": 1.0,
+
+                    "baseLayer": false,
+                    "alsoEnables":
+                    [
+
+                    ],
+                    "alsoDisables":
+                    [
+                        
+                    ]
+
+                }
+                
+            ]
+        }
+    ],
+
+    "linearPlaybackTimeline":
+    [
+        {
+            "action": "PLAY_SEGMENT",
+            "segment": "FULLSONG",
+            "layers": [
+                "Mode/CC Select"
+            ],
+            "beatsUntilNextInstruction": 34
+        },
+        {
+            "action": "ENABLE_LAYER",
+            "layer": "Character Select",
+            "beatsUntilNextInstruction": 34
+        },
+        {
+            "action": "ENABLE_LAYER",
+            "segment": "Track Select",
+            "layer": "Make a Mii",
+            "beatsUntilNextInstruction": 34
+        },
+        {
+            "action": "END_SONG",
+            "method": "fadeoutAfter",
+            "duration": 8.0
+        }
+    ]
+}
